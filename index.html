@@ -1,10 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Varshini Sukumar | Portfolio</title>
+  <style>
+    /* Reset some default */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: #f8f8f8;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px 30px;
+      width: 90%;
+      max-width: 700px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    section h2 {
+      color: #ffdd57;
+      margin-bottom: 15px;
+      font-size: 2rem;
+      border-bottom: 2px solid #ffdd57;
+      padding-bottom: 5px;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .education, .skills {
+      margin-top: 15px;
+    }
+
+    .education h3, .skills h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #ffd966;
+    }
+
+    .education p, .skills p {
+      font-size: 1.1rem;
+      margin-left: 10px;
+    }
+
+    #contact p, #contact a {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    #contact a {
+      color: #ffd966;
+      text-decoration: underline;
+    }
+
+    #contact a:hover {
+      color: #ffdd57;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 15px 0;
+      text-align: center;
+      color: #ddd;
+      font-size: 0.9rem;
+    }
+
+    /* Laptop image styling */
+    .laptop-img {
+      display: block;
+      margin: 20px auto 40px;
+      max-width: 300px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .laptop-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+      section {
+        padding: 15px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -13,41 +151,53 @@
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#education">education</a></li>
-        <li><a href="#skills">skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <img
+    class="laptop-img"
+    src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80"
+    alt="Laptop"
+    loading="lazy"
+  />
+
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m Varshini Sukumar,a B.Sc Information Technology student at SIGC,Trichy.</p>
-    <p>My goal is to build a strong career in IT and keep learning everyday</p> 
+    <p>I’m Varshini Sukumar, a B.Sc Information Technology student at SIGC, Trichy.</p>
+    <p>My goal is to build a strong career in IT and keep learning every day.</p>
   </section>
 
   <section id="education">
-    <h2>education</h2>
-    <div class="B.Sc Information Technology-SIGC,Trichy (pursuing)">
-      <h3></h3>
-      <p>B.Sc Information Technology-SIGC,Trichy (pursuing)</p>
+    <h2>Education</h2>
+    <div class="education">
+      <h3>B.Sc Information Technology</h3>
+      <p>Sri Gokul Institute of Computer Science (SIGC), Trichy (Pursuing)</p>
     </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
     <div class="skills">
-      <h3>skills</h3>
-      <p>Programming:C,java,python</p>
-      <p>Database: MySQL</p>
+      <h3>Programming Languages</h3>
+      <p>C, Java, Python</p>
+      <h3>Database</h3>
+      <p>MySQL</p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email:"varshini@example.com"</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/Varshini Sukumar" target="_blank">Varshini Sukumar</a></p>
+    <p>Email: <a href="mailto:varshini@example.com">varshini@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/varshini-sukumar" target="_blank" rel="noopener noreferrer">Varshini Sukumar</a></p>
   </section>
 
   <footer>
     <p>&copy; 2025 Varshini Sukumar</p>
   </footer>
-
+  
 </body>
 </html>
